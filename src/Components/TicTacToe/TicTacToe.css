@@ -59,14 +59,14 @@
 }
 .board {
   /* width: 564px; */
-  height: 600px;
+  /* height: 600px; */
   display: flex;
   margin: auto;
 }
 @media (max-width: 700px) {
   .tic_tac_game_main_div {
     /* width: 140%; */
-    height: 130vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
