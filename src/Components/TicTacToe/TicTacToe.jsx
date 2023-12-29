@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import "./TicTacToe.css";
 import circle_icon from "../Assets/circle.png";
 import cross_icon from "../Assets/cross.png";
-import fireCrackerSound from "../../Sounds/firework-show-short-64657.mp3";
+import winningSound from "../../Sounds/mixkit-fantasy-game-success-notification-270.wav";
 let data = ["", "", "", "", "", "", "", "", ""];
 
 function TicTacToe() {
@@ -70,7 +70,7 @@ function TicTacToe() {
       titleRef.current.innerHTML = `Congatulations : <img src=${circle_icon} alt="circle_icon" /> wins`;
     }
 
-   new Audio(fireCrackerSound).play();
+   new Audio(winningSound).play();
   };
 
   const resetHandler = () => {
@@ -78,13 +78,14 @@ function TicTacToe() {
     data = ["", "", "", "", "", "", "", "", ""];
     titleRef.current.innerHTML = `Tic Tac Toe Game In <span>React</span>`;
     boxArray?.map((e) => {
-      
+
       return  e.current.innerHTML = "";
   
     });
   };
   return (
     <div className="tic_tac_game_main_div">
+      <div className="tic_tac_game_sub_div">
       <h1 className="title" ref={titleRef}>
         Tic Tac Toe Game In <span>React</span>
       </h1>
@@ -162,6 +163,7 @@ function TicTacToe() {
       <button className="reset_btn" onClick={resetHandler}>
         Reset
       </button>
+      </div>
     </div>
   );
 }
