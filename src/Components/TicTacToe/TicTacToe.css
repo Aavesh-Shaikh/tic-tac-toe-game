@@ -83,11 +83,7 @@
     justify-content: center;
     align-items: center;
   }
-  .title img {
-    /* margin-top: 1.5rem; */
-    padding: 20px 20px;
-    height: 30px;
-  }
+ 
   .boxes {
     display: flex;
     width: 100px;
@@ -96,5 +92,8 @@
     border: 4px solid #0f1b21;
     border-radius: 12px;
     cursor: pointer;
+  }
+  .boxes img {
+    margin: 30px;
   }
 }
