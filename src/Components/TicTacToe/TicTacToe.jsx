@@ -60,7 +60,7 @@ function TicTacToe() {
     }
   };
 
-  let audio;
+ 
   const won = (winner) => {
     setLock(true);
 
@@ -70,7 +70,7 @@ function TicTacToe() {
       titleRef.current.innerHTML = `Congatulations : <img src=${circle_icon} alt="circle_icon" /> wins`;
     }
 
-    audio = new Audio(fireCrackerSound).play();
+   new Audio(fireCrackerSound).play();
   };
 
   const resetHandler = () => {
@@ -78,7 +78,9 @@ function TicTacToe() {
     data = ["", "", "", "", "", "", "", "", ""];
     titleRef.current.innerHTML = `Tic Tac Toe Game In <span>React</span>`;
     boxArray?.map((e) => {
-      e.current.innerHTML = "";
+      
+      return  e.current.innerHTML = "";
+  
     });
   };
   return (
